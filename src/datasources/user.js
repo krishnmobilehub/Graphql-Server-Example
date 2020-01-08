@@ -37,6 +37,11 @@ class UserAPI extends DataSource {
     const users = await this.store.users.create({username: usernameArg, password: passwordArg, phoneNumber: phoneNumberArg, verificationCode: verificationCodeArg});
     return users ? users : null;
   }
+
+  async getUserById(idArg) {
+    const users = await this.store.users.find({ where: { id: idArg } });
+    return users ? users : null;
+  }
 }
 
 module.exports = UserAPI;

@@ -6,10 +6,12 @@ module.exports = {
        const result = await dataSources.userAPI.findUserByUserName(username)
        return result ? true : false;
     },
-    initiatePhoneNumberVerification: async (_, { phoneNumber, code }, { dataSources }) => {
+    initiatePhoneNumberVerification: async (_, { phoneNumber, code }, { dataSources }) =>  {
        const result = await dataSources.userAPI.phoneNumberVerification(phoneNumber, code)
        return result ? true : false;
-    }
+    },
+    user: async (_, { id }, { dataSources }) =>
+      dataSources.userAPI.getUserById(id),
   },
   Mutation: {
     createUser: async (_, { username, password, phoneNumber, verificationCode }, { dataSources }) => {

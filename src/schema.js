@@ -4,6 +4,7 @@ const typeDefs = gql`
   type Query {
     isUsernameAvailable(username: String!): Boolean
     initiatePhoneNumberVerification(phoneNumber: String!,code: String!): Boolean!
+    user(id: ID!): User
   }
 
   type Mutation {
