@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[UserAPI.findUserByUserName] returns null for invalid username 1`] = `null`;
+
+exports[`[UserAPI.getUserById] looks up user by userId 1`] = `null`;
+
+exports[`[UserAPI.getUserById] returns empty array if nothing found 1`] = `null`;

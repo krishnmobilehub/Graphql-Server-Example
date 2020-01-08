@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[UserAPI.findUserByUserName] returns null for invalid username 1`] = `null`;
+
+exports[`[UserAPI.getUserById] looks up user by userId 1`] = `null`;
+
+exports[`[UserAPI.getUserById] returns empty array if nothing found 1`] = `null`;
+
+exports[`Mutations returns message on create user 1`] = `
+Object {
+  "data": Object {
+    "createUser": "Failed",
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`Queries fetches user from username 1`] = `
+Object {
+  "data": Object {
+    "isUsernameAvailable": null,
+  },
+  "errors": Array [
+    [GraphQLError: this.store.users.find is not a function],
+  ],
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
