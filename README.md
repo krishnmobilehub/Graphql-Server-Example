@@ -18,3 +18,4 @@ npm install
 ```bash
 cd npm start
 ```
+visit http://localhost:4000/graphql
